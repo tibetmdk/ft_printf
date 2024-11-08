@@ -40,7 +40,7 @@ int	ft_printf_ptr(void *ptr)
 	len = 0;
 	if (!ptr)
 	{
-		len += ft_printf_str("0x0");
+		len += ft_printf_str("(nil)");
 		return (len);
 	}
 	address = (unsigned long)ptr;
