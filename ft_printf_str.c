@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:04:56 by tmidik            #+#    #+#             */
-/*   Updated: 2024/11/07 13:38:44 by tmidik           ###   ########.fr       */
+/*   Updated: 2024/11/09 02:07:02 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_printf_str(char *str)
 	int	i;
 
 	i = 0;
+	if (str == NULL)
+		str = "(null)";
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);

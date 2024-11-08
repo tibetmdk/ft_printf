@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 11:57:01 by tmidik            #+#    #+#             */
-/*   Updated: 2024/11/07 14:39:55 by tmidik           ###   ########.fr       */
+/*   Updated: 2024/11/09 02:13:08 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # define HEX_LOWER "0123456789abcdef"
 # define HEX_UPPER "0123456789ABCDEF"
+# define INT_MIN -2147483648
+
 # include <unistd.h>
 # include <stdarg.h>
 

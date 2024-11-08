@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:08:53 by tmidik            #+#    #+#             */
-/*   Updated: 2024/11/07 14:34:33 by tmidik           ###   ########.fr       */
+/*   Updated: 2024/11/09 02:14:02 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 int	ft_printf_int(int number)
 {
-	int	count;
+	int	len;
 
-	count = 0;
+	len = 0;
+	if (number == INT_MIN)
+		return (ft_printf_str("-2147483648"));
 	if (number < 0)
 	{
-		count += ft_printf_chr('-');
+		len += ft_printf_chr('-');
 		number *= -1;
 	}
 	if (number < 10)
-		count += ft_printf_chr(number + '0');
+		len += ft_printf_chr(number + '0');
 	else
 	{
-		count += ft_printf_int(number / 10);
-		count += ft_printf_chr(number % 10 + '0');
+		len += ft_printf_int(number / 10);
+		len += ft_printf_chr(number % 10 + '0');
 	}
-	return (count);
+	return (len);
 }

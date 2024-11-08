@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:27:00 by tmidik            #+#    #+#             */
-/*   Updated: 2024/11/07 14:43:29 by tmidik           ###   ########.fr       */
+/*   Updated: 2024/11/09 02:08:23 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_printf_ptr(void *ptr)
 	len = 0;
 	if (!ptr)
 	{
-		len += ft_printf_str("(nil)");
+		len += ft_printf_str("0x0");
 		return (len);
 	}
 	address = (unsigned long)ptr;
