@@ -15,7 +15,7 @@
 int	ft_printf_int(int number)
 {
 	int	count;
-	
+
 	count = 0;
 	if (number < 0)
 	{
